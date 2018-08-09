@@ -8,9 +8,10 @@
 
 [Webpage](https://frontloops.io/)
 
-[Author](https://frontloops.io/)
+[Author](https://github.com/BananaBobby)
 
 ### Finished tasks by me:
 
-* [Step 1]()
-* [Step 2]()
+* [Step 1](https://github.com/Karol-Waliszewski/FrontLoops/tree/master/step1)
+* [Step 2](https://github.com/Karol-Waliszewski/FrontLoops/tree/master/step2)
+* [Step 3](https://github.com/Karol-Waliszewski/FrontLoops/tree/master/step3)
