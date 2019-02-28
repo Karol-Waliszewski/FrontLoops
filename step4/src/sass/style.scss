@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightblue;
+}
+
+.chat {
+  height: 480px;
+  width: 400px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.chat__header {
+  height: 60px;
+  background: #ccc;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat__online {
+  display: inline;
+}
+
+.chat__username {
+  display: inline;
+}
+
+.chat__close {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+.chat__messages {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.chat__timeline {
+  display: flex;
+  align-items: center;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #ddd;
+  }
+}
+
+.chat__day {
+  margin: 0 8px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chat__footer {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+.chat__line {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.chat__input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+}
+
+.chat__button {
+  text-transform: uppercase;
+  font-weight: 600;
+  background: 0;
+  border: 0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 150ms;
+
+  &:hover {
+    color: #ccc;
+  }
+}
+
+// Messages
+
+.message {
+  max-width: 80%;
+  margin: 0.5rem 0;
+
+  .message__time {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ccc;
+    margin-bottom: 1px;
+  }
+
+  .message__value {
+    padding: 8px 10px;
+    border-radius: 2px;
+    font-size: 15px;
+  }
+}
+
+.message--received {
+  @extend .message;
+  margin-right: auto;
+
+  .message__time {
+    text-align: left;
+  }
+
+  .message__value {
+    background: lightblue;
+  }
+}
+
+.message--sent {
+  @extend .message;
+  margin-left: auto;
+
+  .message__time {
+    text-align: right;
+  }
+
+  .message__value {
+    background: sandybrown;
+  }
+}
+
+.message--error {
+  @extend .message;
+  margin-left: auto;
+
+  .message__value {
+    background: lightcoral;
+  }
+}
